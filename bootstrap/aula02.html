@@ -1,0 +1,145 @@
+<!--
+Construção dos layouts com bootstrap:
+A maior parte de manipulação de framework usar as classes bootstrap
+Para containers (divs que se comportam como grandes caixas de conteudos) temos 2 clases:
+Classe container: Coloca margem na esquerda e direita e deixa o conteudo "centralizado"
+Classe container-fluid: Ocupa 100% de largura total do dispositivo.
+
+Fatiamento do site: Para conseguirmos dividir a tela se varias linhas e colunas
+usamos as proprias classes do bootstrap, row para linha e col para coluna.
+Regra: o maximo de colunas que você pode usar em uma linha são 12!
+Por padrão as linhas e colunas vão ocupar as dimensões dos componentes que tiveram dentro delas!
+Se eu tenho um img com 1000px de altura, a linha terá 1000px de altura...
+
+O framework sempre usa a arquitetura mobile-first ou seja, as telas  são "desenhadas"
+para "encaixar" na tela de celulares e depois expandirem para telas maiores garantindo
+e RESPONSIVIDADE
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Container que ocupa 100% da largura e 100% da altura do dispositivo-->
+    <div class="container-fluid vh-100" style="background-color: black;">
+
+        <div class="row" style="height: 10%; background-color: gray;">
+
+            <!-- primeira coluna dentro da primeira linha-->
+            <div class="col">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+
+
+            </div>
+
+
+        </div>
+
+        <!-- Segunda linha-->
+        <div class="row" style="height: 30%; background-color: green;">
+
+            <!-- Primeira coluna da segunda linha-->
+            <div class="col">
+                <img class="w-50 h-50" src="Captura de tela 2026-08-18 145556.png" alt="">
+
+            </div>
+
+        </div>
+
+        <!-- Terceira linha-->
+        <div class="row" style="background-color: rgb(65, 226, 255); justify-content: center;">
+
+            <!-- Primeira coluna da segunda linha-->
+            <div class="col">
+                <h1>Tucanos</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, fuga adipisci incidunt, sint tenetur molestiae esse unde inventore fugit soluta dolor tempora a aperiam provident. Esse, vitae. A, tempore perferendis.</p>
+
+
+            </div>
+            <!-- segunda coluna da terceira linha-->
+            <div class="col">
+                <h1>Biodiversidade</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur distinctio culpa animi, eaque consequuntur fuga explicabo vel quam nam, illum, aliquid quaerat error ipsa veritatis. Praesentium dolores veritatis tempore est?
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
